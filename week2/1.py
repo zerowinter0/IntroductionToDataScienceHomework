@@ -8,6 +8,9 @@ x=int(input(""))
 cnt3=x//3
 cnt2=0
 res=x%3
+if(x==1):
+    print(1)
+    exit()
 if(res==1):
     cnt3-=1
     cnt2+=2

@@ -10,7 +10,7 @@ for i in range(1,10000000):
     if(x*x+y*y<=1):
         cnt+=1
 time_cnt=time.perf_counter()-time_cnt
-print(4*cnt/1e+7,'\n耗时:','%.8f'%time_cnt,'秒')
+print('%.10f'%(4*cnt/1e+7),'\n耗时:','%.8f'%time_cnt,'秒')
 
 # 第二种方法：已知sinx在Π/2~3*Π/2的范围内的数最近的零点都是Π，所以可以用牛顿法求解
 
@@ -23,7 +23,7 @@ time_cnt=time.perf_counter()
 while(not cal(g)):
     g=(-math.sin(g)+math.cos(g)*g)/math.cos(g)
 time_cnt=time.perf_counter()-time_cnt
-print(g,'\n耗时:','%.8f'%time_cnt,'秒')
+print('%.10f'%g,'\n耗时:','%.8f'%time_cnt,'秒')
 
 # 第三种方法：级数求和
 ans=0
@@ -35,4 +35,4 @@ for i in range(1,10000000,2):
     else:ans-=1/i
     flag=not flag
 time_cnt=time.perf_counter()-time_cnt
-print(ans*4,'\n耗时:','%.8f'%time_cnt,'秒')
+print('%.10f'%(ans*4),'\n耗时:','%.8f'%time_cnt,'秒')
