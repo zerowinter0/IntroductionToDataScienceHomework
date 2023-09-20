@@ -1,0 +1,11 @@
+l=0
+r=3
+while(True):
+    ans=(l+r)/2
+    if(abs(ans*ans-2)<1e-6):
+        break
+    elif(ans*ans>2):
+        r=ans
+    else:
+        l=ans
+print((l+r)/2)
