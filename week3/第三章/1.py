@@ -1,0 +1,16 @@
+x=float(input())
+xcpoy=x
+place=1
+while(place<=x):place<<=1
+place/=2
+res=""
+while(xcpoy!=0):
+    if(place==1/2):
+        if(res==""):res+='0.'
+        else:res+='.'
+    if(place<=xcpoy):
+        xcpoy-=place
+        res+='1'
+    else:res+='0'
+    place/=2
+print(res)
